@@ -8,6 +8,34 @@
   <title>To Do List</title>
 </head>
   <body>
+    <form id="">
+        <label for="description">Description:</label>
+        <input id="description" type="text"><br>
+        <label for "taskType"> Select the task type</label>
+        <select id="taskType" name="taskType">
+          <option value="default">Default</option>
+          <option value="HomeTask">Home</option>
+          <option value="WorkTask">Work</option>
+          <option value="HobbyTask">Hobby</option>
+        </select><br>
+
+        <select id="person" name="person">
+          <option value="default">Default</option>
+          <option value="Diane">Diane</option>
+          <option value="Loki">Loki</option>
+          <option value="Thor">Thor</option>
+        </select><br>
+
+        <select id="priority" name="priority">
+          <option value="default">Default</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select><br>
+      <button type="submit" class="btn-success" id="taskButton">Add Task!</button>
+    </form>
+
+    <div id = "AllTasks"></div>
 
   </body>
 </html>
