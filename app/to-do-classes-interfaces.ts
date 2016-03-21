@@ -38,7 +38,7 @@ module ToDoList {
     }
   }
   //this class MUST be assigned to a person
-  class WorkTask extends Task {
+  export class WorkTask extends Task {
     constructor(public dueDate: Date, public description: string, public priority: string, public assignedTo: IPerson){
       super(description, priority, assignedTo);
     }
