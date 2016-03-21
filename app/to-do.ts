@@ -7,6 +7,20 @@ class Task {
 }
 class HomeTask extends Task {}
 
+class HobbyTask extends Task {
+  constructor(public description: string){
+    super(description, "low");
+  }
+}
+
+class WorkTask extends Task {
+  constructor(public dueDate: Date, public description: string, public priority: string){
+    super(description, priority);
+  }
+}
+
+
+
 var tasks = [];
 tasks.push(new HomeTask("Do the dishes.", "High"));
 tasks.push(new HomeTask("Buy chocolate.", "Low"));
