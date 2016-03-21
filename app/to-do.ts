@@ -22,7 +22,11 @@ class Task implements ITask {
   }
 }
 
-class HomeTask extends Task {}
+class HomeTask extends Task {
+  constructor(public description: string, public priority: string, public assignedTo?: IPerson){
+    super(description, priority);
+  }
+}
 
 class HobbyTask extends Task {
   constructor(public description: string){
@@ -31,11 +35,25 @@ class HobbyTask extends Task {
 }
 
 class WorkTask extends Task {
-  constructor(public dueDate: Date, public description: string, public priority: string){
-    super(description, priority);
+  constructor(public dueDate: Date, public description: string, public priority: string, public assignedTo: IPerson){
+    super(description, priority, assignedTo);
   }
 }
 
+var diane: IPerson = {
+  name: "Diane D",
+  email: "diane@epicodus.com"
+}
+
+var thor: IPerson = {
+  name: "Thor Son of Odin",
+  email: "thor@asgard.com"
+}
+
+var loki: IPerson = {
+  name: "God of mischief",
+  email: "loki@geocities.com"
+}
 
 //tasks
 var tasks = [];
