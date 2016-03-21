@@ -1,10 +1,23 @@
-class Task {
+//interfaces
+interface ITask {
+  description: string;
+  done: boolean;
+  priority: string;
+  markDone(): void;
+}
+
+
+
+
+//classes
+class Task implements ITask {
   done: boolean = false;
   constructor(public description: string, public priority: string){}
   markDone(){
     this.done = true;
   }
 }
+
 class HomeTask extends Task {}
 
 class HobbyTask extends Task {
@@ -19,6 +32,8 @@ class WorkTask extends Task {
   }
 }
 
+
+//tasks
 var tasks = [];
 tasks.push(new HomeTask("Do the dishes.", "High"));
 tasks.push(new HomeTask("Buy chocolate.", "Low"));
