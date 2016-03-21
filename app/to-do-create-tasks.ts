@@ -67,11 +67,11 @@ $(document).ready(function(){
     var dueDate = $('#dueDate').val();
 
     if (type === "HomeTask") {
-      $('#allTasks').append('<p>Description: ' + description + ', Priority: ' + priority + ', Person: ' + person + '</p>');
+      $('#homeTasks').append('<p>Description: ' + description + ', Priority: ' + priority + ', Person: ' + person + '</p>');
     } else if (type === "WorkTask") {
-      $('#allTasks').append('<p>Description: ' + description + ', Priority: ' + priority + ', Person: ' + person + ', Due Date: ' + dueDate + '</p>');
+      $('#workTasks').append('<p>Description: ' + description + ', Priority: ' + priority + ', Person: ' + person + ', Due Date: ' + dueDate + '</p>');
     } else if (type === "HobbyTask") {
-      $('#allTasks').append('<p>Description: ' + description + ', Priority: ' + priority + '</p>');
+      $('#hobbyTasks').append('<p>Description: ' + description + ', Priority: ' + priority + '</p>');
     }
 
     console.log(type);
