@@ -3,20 +3,35 @@
 <html>
 <head>
     <head>
+      <script type="text/javascript" src="build/js/vendor.min.js"></script>
       <script type="text/javascript" src="build/js/app.js"></script>
+
       </head>
   <title>To Do List</title>
 </head>
   <body>
     <form id="">
-        <label for="description">Description:</label>
-        <input id="description" type="text"><br>
         <label for "taskType"> Select the task type</label>
         <select id="taskType" name="taskType">
           <option value="default">Default</option>
           <option value="HomeTask">Home</option>
           <option value="WorkTask">Work</option>
           <option value="HobbyTask">Hobby</option>
+        </select>
+
+        <br>
+
+        <label for="description">Description:</label>
+        <input id="description" type="text"><br>
+
+        <label for="dueDate">Due Date:</label>
+        <input id="dueDate" type="text"><br>
+
+        <select id="priority" name="priority">
+          <option value="default">Default</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
         </select><br>
 
         <select id="person" name="person">
@@ -26,16 +41,12 @@
           <option value="Thor">Thor</option>
         </select><br>
 
-        <select id="priority" name="priority">
-          <option value="default">Default</option>
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select><br>
-      <button type="submit" class="btn-success" id="taskButton">Add Task!</button>
+
+        <button type="submit" class="btn-success" id="taskButton">Select Task!</button>
+      <!-- <button type="submit" class="btn-success" id="infoButton">Add Task!</button> -->
     </form>
 
-    <div id = "AllTasks"></div>
+    <div id = "allTasks"></div>
 
   </body>
 </html>
